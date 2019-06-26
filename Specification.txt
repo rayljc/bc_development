@@ -1,1 +1,11 @@
 Refer to: https://reurl.cc/Gy0lW
+
+客戶規格：
+1. 新增一張表 “Expense”，裡面應有欄位 Code <code 20>, Description <text 50>, 和 Disabled <boolean>
+2. 在 G/L Account 中新增欄位 “Expense Code”，此欄位的值要可以從 table “Expense” 中選取
+3. 使用者要能在相關頁面 (Page) 去輸入有關 “Expense Code” 的資料
+4. 使用者在 G/L Account 和 Chart of Account 頁面中，可以去對 “Expense Code” 賦值
+5. 當 G/L Account 的項目被加到 Purchase Line 中，”Expense Code” 的值要能從 G/L Account 複製到 Purchase Line
+6. 如果使用者在 Purchase Line 中修改 Quantity，”Expense Code” 的值要能被清除掉
+7. 在 Purchase Line 過帳時，”Expense Code” 是必備 (mandatory) 的，而且系統會檢查 “Expense Code” 是否沒有被 Disabled 掉。否則，系統跳出錯誤訊息。
+8. 在過帳時， “Expense Code” 的資訊也要被帶入到 General Ledger Entries
